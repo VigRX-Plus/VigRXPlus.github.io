@@ -1,0 +1,109 @@
+#menuh-container
+	{
+	position: absolute;		
+	top: 80px;
+	left:50%;
+	margin-left:-503px;
+	}
+
+#menuh
+	{
+	font-size: small;
+	font-family: arial, helvetica, sans-serif;
+	width:100%;
+	float:left;
+	margin:2em;
+	margin-top: 1em;
+	
+	}
+		
+#menuh a
+	{
+	text-align: left;
+	display:block;
+	border-right:#abd275 2px solid;
+	white-space:nowrap;
+	margin:0;
+	padding: .5em 1.5em .5em 1.5em;
+	font-size:14px;
+	color:#333;
+	}
+	
+#menuh a:link, #menuh a:visited, #menuh a:active	/* menu at rest */
+	{
+	color:#333;
+	background-color:#e9e9e9;
+	text-decoration:none;
+	}
+	
+#menuh a:hover						/* menu on mouse-over  */
+	{
+	color:#333;
+	background-color: #fff;
+	text-decoration:none;
+	}	
+	
+#menuh a.top_parent, #menuh a.top_parent:hover  /* attaches down-arrow to all top-parents */
+	{
+	border-left:#abd275 2px solid;
+	}
+	
+#menuh a.parent, #menuh a.parent:hover 	/* attaches side-arrow to all parents */
+	{
+	}
+
+#menuh ul
+	{
+	list-style:none;
+	margin:0;
+	padding:0;
+	float:left;
+	/* width:12em;	width of all menu boxes */
+	/* NOTE: For adjustable menu boxes you can comment out the above width rule.
+	However, you will have to add padding in the "#menh a" rule so that the menu boxes
+	will have space on either side of the text -- try it */
+	}
+
+#menuh li
+	{
+	position:relative;
+	min-height: 1px;		/* Sophie Dennis contribution for IE7 */
+	vertical-align: bottom;		/* Sophie Dennis contribution for IE7 */
+	}
+
+#menuh ul ul
+	{
+	position:absolute;
+	z-index:500;
+	top:auto;
+	display:none;
+	padding: 1em;
+	margin:-1em 0 0 -1em;
+	width:14em;
+	}
+
+#menuh ul ul ul
+	{
+	top:0;
+	left:100%;
+	}
+
+div#menuh li:hover
+	{
+	cursor:pointer;
+	z-index:100;
+	}
+
+div#menuh li:hover ul ul,
+div#menuh li li:hover ul ul,
+div#menuh li li li:hover ul ul,
+div#menuh li li li li:hover ul ul
+{display:none;}
+
+div#menuh li:hover ul,
+div#menuh li li:hover ul,
+div#menuh li li li:hover ul,
+div#menuh li li li li:hover ul
+{display:block;}
+
+/* End CSS Drop Down Menu */
